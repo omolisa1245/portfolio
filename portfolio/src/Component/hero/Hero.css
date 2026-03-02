@@ -1,0 +1,123 @@
+.hero-container {
+    width: 100%;
+    background: white;
+}
+
+/* BACKGROUND */
+
+.hero-background {
+    width: 100%;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url('../../assets/hero_bac.png');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* CONTENT */
+
+.hero-content {
+    width: 90%;
+    max-width: 1000px;
+    color: white;
+}
+
+/* SMALL HEADING */
+
+.hero-content h4 {
+    font-size: clamp(16px, 1.5vw, 20px);
+    font-weight: 400;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    color: rgb(245, 244, 243);
+}
+
+/* MAIN TITLES */
+
+.hero-content h2 {
+    font-size: clamp(28px, 4vw, 48px);
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.hero-content h1 {
+    font-size: clamp(36px, 6vw, 70px);
+    font-weight: 800;
+    margin-top: 5px;
+}
+
+/* PARAGRAPH */
+
+.hero-content p {
+    font-size: clamp(14px, 1.2vw, 18px);
+    margin-top: 15px;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.6;
+}
+
+/* BUTTONS */
+
+.button-holder {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.button-holder button {
+    padding: 14px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+}
+
+/* PRIMARY */
+
+.button-holder button:nth-child(1) {
+    background: rgb(253, 177, 12);
+    color: white;
+}
+
+.button-holder button:nth-child(1):hover {
+    background: white;
+    color: black;
+}
+
+/* SECONDARY */
+
+.button-holder button:nth-child(2) {
+    background: white;
+    color: black;
+}
+
+.button-holder button:nth-child(2):hover {
+    background: rgb(253, 177, 12);
+    color: white;
+}
+
+/* ICONS */
+
+.arrow-btn {
+    font-size: 18px;
+}
+
+.waving {
+    color: rgb(241, 162, 57);
+    font-size: 20px;
+}
