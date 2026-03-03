@@ -321,7 +321,7 @@ const Portfolio = () => {
             </h2>
 
             <a
-              href="https://goplay-raj7.vercel.app/s"
+              href="https://goplay-raj7.vercel.app/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
