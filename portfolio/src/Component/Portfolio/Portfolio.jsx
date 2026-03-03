@@ -48,7 +48,7 @@ const PortfolioSection = ({ title, description, images }) => {
     <div className="flex flex-col lg:flex-row gap-10 items-center mb-20">
 
       {/* Left Content */}
-      <div className="flex-1 -mt-32 space-y-4">
+      <div className="flex-1 md:-mt-32 space-y-4">
         <div className="flex items-center gap-3 text-orange-500">
           <FaGithub size={28} />
           <span className="font-semibold">GitHub Project</span>
@@ -62,7 +62,7 @@ const PortfolioSection = ({ title, description, images }) => {
       </div>
 
       {/* Right Images */}
-      <div className="flex-1 grid grid-cols-2 sm:grid-cols-3 gap-4">
+      <div className="flex-1 mb-48 md:mb-0 grid grid-cols-2 sm:grid-cols-3 gap-4">
         {images.map((img, index) => (
           <img
             key={index}
@@ -90,7 +90,7 @@ const PortfolioSection = ({ title, description, images }) => {
           <img
             src={selectedImage}
             alt=""
-            className="max-w-[90%] z-999 max-h-[85%] rounded-lg shadow-lg"
+            className="max-w-[90%] mt-32 z-999 max-h-[85%] rounded-lg shadow-lg"
           />
         </div>
       )}
