@@ -4,7 +4,7 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 import { LuDownload } from "react-icons/lu";
 import { Link } from "react-scroll";
 
-const PDF_FILE_URL = "/OLAYEMI_OMOLISA CV.pdf"; // put file in public folder
+const PDF_FILE_URL = "/Olayemi-Omolisa C.V-Web-developer.pdf"; // put file in public folder
 
 const About = () => {
     const downloadFileAtURL = (url) => {
