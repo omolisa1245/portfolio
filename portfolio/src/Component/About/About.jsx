@@ -67,28 +67,26 @@ const About = () => {
                 <div className="flex-1 flex justify-center mt-19">
                     <div className="relative w-[260px] h-[260px] sm:w-[320px] sm:h-[320px] md:w-[380px] md:h-[380px] flex items-center justify-center">
 
-                        {/* Blue Shape */}
-                        <div className="absolute  w-72 h-72 sm:w-80 sm:h-80 bg-gray-100 rotate-45 rounded-lg"></div>
+                        {/* Glow background */}
+                        <div className="absolute w-full h-full bg-gradient-to-br from-orange-500/30 via-purple-500/20 to-blue-500/20 blur-3xl rounded-full"></div>
 
-                        {/* Orange Border Shape */}
-                        <div className="absolute w-77 h-77 sm:w-85 sm:h-85 border-4 border-orange-400 rotate-45 rounded-lg"></div>
-                        <div className="w-83 h-58 lg:w-93 h-83 bg-stone-950 absolute z-30 -bottom-70 lg:-bottom-58" 
-                          style={{
-                                clipPath: "polygon(50% 0%, 100% 0, 81% 50%, 22% 50%, 0 0)"
-                            }}
-                        
-                        >
-                          
-                        </div>
+                        {/* Glass card */}
+                        <div className="absolute w-72 h-72 sm:w-80 sm:h-80 backdrop-blur-xl bg-white/10 border border-white/20 rounded-2xl shadow-2xl"></div>
+
+                        {/* Rotated accent border */}
+                        <div className="absolute w-80 h-80 border-2 border-orange-400/40 rotate-12 rounded-2xl"></div>
+
+                       
 
                         {/* Image */}
                         <img
                             src={about_img}
                             alt="about"
-                            className="relative z-10 w-[220px] sm:w-[260px] md:w-[300px] object-contain"
+                            className="relative z-10 w-[220px] sm:w-[260px] md:w-[280px] object-contain drop-shadow-2xl"
                         />
                     </div>
                 </div>
+
 
             </div>
 

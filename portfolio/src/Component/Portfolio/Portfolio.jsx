@@ -34,6 +34,20 @@ import just6 from "../../assets/just6.png";
 import just7 from "../../assets/just7.png";
 import just9 from "../../assets/just9.png";
 
+import bank1 from "../../assets/bank1.png";
+import bank2 from "../../assets/bank2.png";
+import bank3 from "../../assets/bank3.png";
+import bank4 from "../../assets/bank4.png";
+import bank5 from "../../assets/bank5.png";
+import bank6 from "../../assets/bank6.png";
+import bank7 from "../../assets/bank7.png";
+import bank8 from "../../assets/bank8.png";
+
+import dj1 from "../../assets/dj1.png";
+import dj2 from "../../assets/dj2.png";
+import dj3 from "../../assets/dj3.png";
+
+
 
 import player1 from "../../assets/player1.png";
 import player2 from "../../assets/player2.png";
@@ -104,9 +118,147 @@ const Portfolio = () => {
       id="Portfolio"
       className="w-full px-6 md:px-12 lg:px-20 py-16 bg-stone-900"
     >
-      <h1 className="text-3xl md:text-4xl font-bold text-center mb-26 text-white">
+      <h1 className="text-3xl mb-40 md:text-4xl font-bold text-center text-white">
         My Portfolio
       </h1>
+
+
+      <PortfolioSection
+        title="Online Mobile Bank App"
+        description="The Online Mobile Banking App provides users with a secure and seamless way to manage their finances on the go. With features like account management, fund transfers, transaction history, and real-time notifications, the app delivers convenience, reliability, and a modern banking experience directly from a smartphone."
+        images={[bank1, bank2, bank3, bank4, bank7, bank8,]}
+      />
+
+      <div className="w-full lg:w-[50%] px-4 -ml-5">
+        <div className="max-w-4xl -mt-50 mx-auto space-y-6">
+
+          {/* GitHub */}
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
+              GitHub :
+            </h2>
+
+            <a
+              href="https://github.com/omolisa1245/Tal-Bank.git"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
+            >
+              View Repository
+            </a>
+          </div>
+
+          {/* Website */}
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
+              Website :
+            </h2>
+
+            <a
+              href="https://tal-bank-j87e.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
+            >
+              Visit Website
+            </a>
+          </div>
+
+        </div>
+      </div>
+      <hr className="mt-20 border-gray-300 mb-39" />
+
+
+      <PortfolioSection
+        title="Virtual DJ App"
+        description="The Virtual DJ App is a dynamic music mixing platform designed to deliver a seamless and immersive DJ experience directly in the browser. It allows users to play, mix, and control audio tracks with intuitive controls, real-time effects, and smooth transitions. Built with performance and responsiveness in mind, the application provides a modern interface that enhances creativity while maintaining simplicity for both beginners and advanced users."
+        images={[dj1, dj2, dj3,dj1,dj3,dj1]}
+      />
+
+      <div className="w-full lg:w-[50%] px-4 -ml-5">
+        <div className="max-w-4xl -mt-14 mx-auto space-y-6">
+
+          {/* GitHub */}
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
+              GitHub :
+            </h2>
+
+            <a
+              href="https://github.com/omolisa1245/virtual.git"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
+            >
+              View Repository
+            </a>
+          </div>
+
+          {/* Website */}
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
+              Website :
+            </h2>
+
+            <a
+              href="https://virtual-seven-kappa.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
+            >
+              Visit Website
+            </a>
+          </div>
+
+        </div>
+      </div>
+      <hr className="mt-20 border-gray-300 mb-18" />
+
+
+      <PortfolioSection
+        title="Musical Player App"
+        description="The Musical Player App is a modern, interactive web application designed to deliver a seamless and immersive music listening experience. Built with a focus on performance, responsiveness, and user-friendly design, the app allows users to play, pause, skip, and repeat tracks effortlessly while enjoying a visually engaging interface."
+        images={[player1, player2, player3, player1, player2, player3]}
+      />
+
+      <div className="w-full lg:w-[50%] px-4 -ml-5">
+        <div className="max-w-4xl -mt-22 mx-auto space-y-6">
+
+          {/* GitHub */}
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
+              GitHub :
+            </h2>
+
+            <a
+              href="https://github.com/omolisa1245/Goplay.git"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
+            >
+              View Repository
+            </a>
+          </div>
+
+          {/* Website */}
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
+              Website :
+            </h2>
+
+            <a
+              href="https://goplay-raj7.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
+            >
+              Visit Website
+            </a>
+          </div>
+
+        </div>
+      </div>
+      <hr className="mt-20 border-gray-300 mb-18" />
 
       <PortfolioSection
         title="Kiddies Store E-commerce"
@@ -289,51 +441,9 @@ const Portfolio = () => {
       </div>
       <hr className="mt-20 border-gray-300 mb-18" />
 
-      <PortfolioSection
-        title="Musical Player App"
-        description="The Musical Player App is a modern, interactive web application designed to deliver a seamless and immersive music listening experience. Built with a focus on performance, responsiveness, and user-friendly design, the app allows users to play, pause, skip, and repeat tracks effortlessly while enjoying a visually engaging interface."
-        images={[player1, player2, player3, player4]}
-      />
 
-      <div className="w-full lg:w-[50%] px-4 lg:-ml-5 xl:-ml-7 -mt-67">
-        <div className="max-w-4xl mx-auto space-y-6">
 
-          {/* GitHub */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
-              GitHub :
-            </h2>
 
-            <a
-              href="https://github.com/omolisa1245/Goplay.git"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
-            >
-              View Repository
-            </a>
-          </div>
-
-          {/* Website */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
-              Website :
-            </h2>
-
-            <a
-              href="https://goplay-raj7.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
-            >
-              Visit Website
-            </a>
-          </div>
-
-        </div>
-      </div>
-
-      <hr className="mt-20 border-gray-300 mb-18" />
     </div>
   );
 };
