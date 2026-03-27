@@ -15,7 +15,7 @@
 }
 
 .nav-holder li {
-    font-size: 1.1vw;
+    font-size: 16px;
     list-style: none;
     color: white;
     position: relative;
@@ -57,4 +57,19 @@
 
 .white-nav li {
     color: black;
+}
+
+
+
+
+
+/*........keyframe.........*/
+
+
+@media(max-width : 500px) {
+
+.nav-holder li {
+    font-size: 13px;
+   
+}
 }
