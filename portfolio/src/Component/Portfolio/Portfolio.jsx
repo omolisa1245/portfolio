@@ -150,7 +150,7 @@ const Portfolio = () => {
       />
 
       <div className="w-full lg:w-[50%] px-4 -ml-5">
-        <div className="max-w-4xl -mt-40 mx-auto space-y-6">
+        <div className="max-w-4xl -mt-60 mx-auto space-y-6">
 
           {/* GitHub */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
@@ -195,8 +195,8 @@ const Portfolio = () => {
         images={[fam1, fam2, fam3, fam4, fam7, fam8,]}
       />
 
-      <div className="w-full lg:w-[50%] px-4 -ml-5">
-        <div className="max-w-4xl -mt-50 mx-auto space-y-6">
+      <div className="w-full lg:w-[50%] px-4 ">
+        <div className="max-w-4xl -mt-20 mx-auto space-y-6">
 
           {/* GitHub */}
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
