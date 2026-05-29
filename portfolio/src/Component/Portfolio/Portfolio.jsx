@@ -54,6 +54,26 @@ import player2 from "../../assets/player2.png";
 import player3 from "../../assets/player3.png";
 import player4 from "../../assets/player4.png"
 
+
+import fam1 from "../../assets/fam1.png"
+import fam2 from "../../assets/fam2.png"
+import fam3 from "../../assets/fam3.png"
+import fam4 from "../../assets/fam4.png"
+import fam5 from "../../assets/fam5.png"
+import fam6 from "../../assets/fam6.png"
+import fam7 from "../../assets/fam7.png"
+import fam8 from "../../assets/fam8.png"
+
+
+import soc1 from "../../assets/soc1.png"
+import soc2 from "../../assets/soc2.png"
+import soc3 from "../../assets/soc3.png"
+import soc4 from "../../assets/soc4.png"
+import soc5 from "../../assets/soc5.png"
+import soc6 from "../../assets/soc6.png"
+import soc7 from "../../assets/soc7.png"
+
+
 const PortfolioSection = ({ title, description, images }) => {
 
   const [selectedImage, setSelectedImage] = useState(null);
@@ -123,6 +143,98 @@ const Portfolio = () => {
       </h1>
 
 
+      <PortfolioSection
+        title="Social Media Platform"
+        description="A social media platform inspired by Instagram, TikTok, and WhatsApp, focused on performance, scalability, and seamless user experience across mobile and web platforms. Built with real-time messaging, stories, media sharing, authentication, notifications, and responsive cross-platform architecture."
+        images={[soc1, soc2, soc3, soc4, soc7,]}
+      />
+
+      <div className="w-full lg:w-[50%] px-4 -ml-5">
+        <div className="max-w-4xl -mt-50 mx-auto space-y-6">
+
+          {/* GitHub */}
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
+              GitHub :
+            </h2>
+
+            <a
+              href="https://github.com/omolisa1245/ChatAt.git"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
+            >
+              View Repository
+            </a>
+          </div>
+
+          {/* Website */}
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
+              Website :
+            </h2>
+
+            <a
+              href="https://chat-at-a1y9.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
+            >
+              Visit Website
+            </a>
+          </div>
+
+        </div>
+      </div>
+      <hr className="mt-20 border-gray-300 mb-39" />
+
+
+      <PortfolioSection
+        title="Christian Empowerment Platform"
+        description="faith-based, non-governmental organization established with a deep burdenfor the holistic development of young people in a rapidly changing and morallycomplex world. The organization was birthed out of a clear recognition of thspiritual, moral, emotional, and leadership gaps that increasingly characterizecontemporary society, especially among youths."
+        images={[fam1, fam2, fam3, fam4, fam7, fam8,]}
+      />
+
+      <div className="w-full lg:w-[50%] px-4 -ml-5">
+        <div className="max-w-4xl -mt-50 mx-auto space-y-6">
+
+          {/* GitHub */}
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
+              GitHub :
+            </h2>
+
+            <a
+              href="https://github.com/Fameuntold/Fameuntold.git"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
+            >
+              View Repository
+            </a>
+          </div>
+
+          {/* Website */}
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
+            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
+              Website :
+            </h2>
+
+            <a
+              href="https://fameuntold-v6c3.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
+            >
+              Visit Website
+            </a>
+          </div>
+
+        </div>
+      </div>
+      <hr className="mt-20 border-gray-300 mb-39" />
+
+      
       <PortfolioSection
         title="Online Mobile Bank App"
         description="The Online Mobile Banking App provides users with a secure and seamless way to manage their finances on the go. With features like account management, fund transfers, transaction history, and real-time notifications, the app delivers convenience, reliability, and a modern banking experience directly from a smartphone."
