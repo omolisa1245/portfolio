@@ -146,7 +146,7 @@ const Portfolio = () => {
       <PortfolioSection
         title="Social Media Platform"
         description="A social media platform inspired by Instagram, TikTok, and WhatsApp, focused on performance, scalability, and seamless user experience across mobile and web platforms. Built with real-time messaging, stories, media sharing, authentication, notifications, and responsive cross-platform architecture."
-        images={[soc1, soc2, soc3, soc4, soc7,]}
+        images={[soc1, soc2, soc3, soc4, soc5,soc6,soc7,]}
       />
 
       <div className="w-full lg:w-[50%] px-4 -ml-5">
