@@ -192,7 +192,7 @@ const Portfolio = () => {
       <PortfolioSection
         title="Christian Empowerment Platform"
         description="faith-based, non-governmental organization established with a deep burdenfor the holistic development of young people in a rapidly changing and morallycomplex world. The organization was birthed out of a clear recognition of thspiritual, moral, emotional, and leadership gaps that increasingly characterizecontemporary society, especially among youths."
-        images={[fam1, fam2, fam3, fam4, fam7, fam8,]}
+        images={[fam1, fam3, fam4, fam7, fam8,]}
       />
 
       <div className="w-full lg:w-[50%] px-4 ">
