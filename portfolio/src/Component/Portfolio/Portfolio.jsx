@@ -1,562 +1,257 @@
 import React, { useState } from "react";
-import { FaGithub } from "react-icons/fa";
-import { X } from "lucide-react";
-import native1 from "../../assets/native1.png";
-import native2 from "../../assets/native2.png";
-import native3 from "../../assets/native3.png";
-import native4 from "../../assets/native4.png";
-import native5 from "../../assets/native5.png";
-import native6 from "../../assets/native6.png";
+import {
+  FaGithub,
+  FaExternalLinkAlt,
+} from "react-icons/fa";
 
-import food1 from "../../assets/food1.png";
-import food2 from "../../assets/food2.png";
-import food3 from "../../assets/food3.png";
-import food4 from "../../assets/food4.png";
-import food5 from "../../assets/food5.png";
-import food6 from "../../assets/food6.png";
-import food7 from "../../assets/food7.png";
-
-import car1 from "../../assets/car1.png";
-import car2 from "../../assets/car2.png";
-import car3 from "../../assets/car3.png";
-import car4 from "../../assets/car4.png";
-import car5 from "../../assets/car5.png";
-import car6 from "../../assets/car6.png";
-import car7 from "../../assets/car7.png";
-import car8 from "../../assets/car8.png";
-
-import just1 from "../../assets/just1.png";
-import just2 from "../../assets/just2.png";
-import just3 from "../../assets/just3.png";
-import just4 from "../../assets/just4.png";
-import just5 from "../../assets/just5.png";
-import just6 from "../../assets/just6.png";
-import just7 from "../../assets/just7.png";
-import just9 from "../../assets/just9.png";
-
+import soc1 from "../../assets/soc1.png";
 import bank1 from "../../assets/bank1.png";
-import bank2 from "../../assets/bank2.png";
-import bank3 from "../../assets/bank3.png";
-import bank4 from "../../assets/bank4.png";
-import bank5 from "../../assets/bank5.png";
-import bank6 from "../../assets/bank6.png";
-import bank7 from "../../assets/bank7.png";
-import bank8 from "../../assets/bank8.png";
-
 import dj1 from "../../assets/dj1.png";
-import dj2 from "../../assets/dj2.png";
-import dj3 from "../../assets/dj3.png";
-
-
-
+import fam1 from "../../assets/fam1.png";
+import native1 from "../../assets/native1.png";
+import food1 from "../../assets/food1.png";
+import car1 from "../../assets/car1.png";
+import just1 from "../../assets/just1.png";
 import player1 from "../../assets/player1.png";
-import player2 from "../../assets/player2.png";
-import player3 from "../../assets/player3.png";
-import player4 from "../../assets/player4.png"
 
+const projects = [
+  {
+    title: "Social Media Platform",
+    description:
+      "Instagram, TikTok, and WhatsApp-inspired platform with messaging, stories, media sharing, authentication, and notifications.",
+    image: soc1,
+    github: "https://github.com/omolisa1245/ChatAt.git",
+    website: "https://chat-at-a1y9.vercel.app/",
+    tech: ["React", "Node.js", "Firebase"],
+    featured: true,
+  },
 
-import fam1 from "../../assets/fam1.png"
-import fam2 from "../../assets/fam2.png"
-import fam3 from "../../assets/fam3.png"
-import fam4 from "../../assets/fam4.png"
-import fam5 from "../../assets/fam5.png"
-import fam6 from "../../assets/fam6.png"
-import fam7 from "../../assets/fam7.png"
-import fam8 from "../../assets/fam8.png"
+  {
+    title: "Christian Empowerment Platform",
+    description:
+      "Faith-based platform focused on leadership development, mentorship, youth empowerment, and community growth.",
+    image: fam1,
+    github: "https://github.com/Fameuntold/Fameuntold.git",
+    website: "https://fameuntold-v6c3.vercel.app/",
+    tech: ["React", "Tailwind"],
+    featured: true,
+  },
 
+  {
+    title: "Online Banking App",
+    description:
+      "Modern banking application with secure transfers, transaction history, account management, and notifications.",
+    image: bank1,
+    github: "https://github.com/omolisa1245/Tal-Bank.git",
+    website: "https://tal-bank-j87e.vercel.app/",
+    tech: ["React", "Tailwind", "API"],
+    featured: true,
+  },
 
-import soc1 from "../../assets/soc1.png"
-import soc2 from "../../assets/soc2.png"
-import soc3 from "../../assets/soc3.png"
-import soc4 from "../../assets/soc4.png"
-import soc5 from "../../assets/soc5.png"
-import soc6 from "../../assets/soc6.png"
-import soc7 from "../../assets/soc7.png"
+  {
+    title: "Virtual DJ App",
+    description:
+      "Browser-based DJ application with audio controls, effects, mixing tools, and responsive performance.",
+    image: dj1,
+    github: "https://github.com/omolisa1245/virtual.git",
+    website: "https://virtual-seven-kappa.vercel.app/",
+    tech: ["React", "Web Audio API"],
+  },
 
+  {
+    title: "Music Player",
+    description:
+      "Interactive music player with playlist support, playback controls, and responsive UI.",
+    image: player1,
+    github: "https://github.com/omolisa1245/Goplay.git",
+    website: "https://goplay-raj7.vercel.app/",
+    tech: ["React", "CSS"],
+  },
 
-const PortfolioSection = ({ title, description, images }) => {
+  {
+    title: "Kiddies Store",
+    description:
+      "E-commerce platform for newborn, baby, and toddler products with smooth shopping experience.",
+    image: native1,
+    github: "https://github.com/omolisa1245/kiddiesplace.git",
+    website: "https://kiddiesplace-tdse.vercel.app/",
+    tech: ["React", "Tailwind"],
+  },
 
-  const [selectedImage, setSelectedImage] = useState(null);
+  {
+    title: "Food E-commerce",
+    description:
+      "Online food ordering platform showcasing authentic Nigerian dishes and cultural experiences.",
+    image: food1,
+    github: "https://github.com/omolisa1245/nativepot.git",
+    website: "https://nativepot-ten.vercel.app/",
+    tech: ["React", "Tailwind"],
+  },
 
+  {
+    title: "Car Services Website",
+    description:
+      "Vehicle transportation and logistics platform focused on reliability and customer satisfaction.",
+    image: car1,
+    github: "https://github.com/omolisa1245/ride-along.git",
+    website: "https://ride-along-l49g.vercel.app/",
+    tech: ["React", "Tailwind"],
+  },
+
+  {
+    title: "Music Instrument Platform",
+    description:
+      "Virtual music lesson platform connecting students with instructors for online learning.",
+    image: just1,
+    github: "https://github.com/omolisa1245/justring.git",
+    website: "https://justring-c62t.vercel.app/",
+    tech: ["React", "Node.js"],
+  },
+];
+
+const ProjectCard = ({ project, onPreview }) => {
   return (
-    <div className="flex flex-col lg:flex-row gap-10 items-center mb-20">
+    <div className="group relative overflow-hidden rounded-3xl border border-stone-700 bg-stone-800/70 backdrop-blur-lg transition-all duration-300 hover:border-amber-500 hover:-translate-y-2">
 
-      {/* Left Content */}
-      <div className="flex-1 md:-mt-32 space-y-4">
-        <div className="flex items-center gap-3 text-orange-500">
-          <FaGithub size={28} />
-          <span className="font-semibold">GitHub Project</span>
-        </div>
-
-        <h2 className="text-2xl md:text-3xl text-white font-bold">{title}</h2>
-
-        <p className="text-gray-50 leading-relaxed">
-          {description}
-        </p>
-      </div>
-
-      {/* Right Images */}
-      <div className="flex-1 mb-48 md:mb-0 grid grid-cols-2 sm:grid-cols-3 gap-4">
-        {images.map((img, index) => (
-          <img
-            key={index}
-            src={img}
-            alt=""
-            onClick={() => setSelectedImage(img)}
-            className="rounded-xl shadow-md hover:scale-105 transition duration-300 cursor-pointer"
-          />
-        ))}
-      </div>
-
-      {/* Modal */}
-      {selectedImage && (
-        <div className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50">
-
-          {/* Close Button */}
-          <button
-            onClick={() => setSelectedImage(null)}
-            className="absolute top-40 right-6 text-white text-3xl"
-          >
-            ✕
-          </button>
-
-          {/* Large Image */}
-          <img
-            src={selectedImage}
-            alt=""
-            className="max-w-[90%] mt-32 z-999 max-h-[85%] rounded-lg shadow-lg"
-          />
-        </div>
+      {project.featured && (
+        <span className="absolute top-4 left-4 z-10 rounded-full bg-amber-500 px-3 py-1 text-xs font-semibold text-black">
+          Featured
+        </span>
       )}
+
+      <div className="overflow-hidden">
+        <img
+          src={project.image}
+          alt={project.title}
+          onClick={() => onPreview(project.image)}
+          className="h-64 w-full cursor-pointer object-cover transition duration-500 group-hover:scale-105"
+        />
+      </div>
+
+      <div className="p-6">
+        <h3 className="text-2xl font-bold text-white">
+          {project.title}
+        </h3>
+
+        <p className="mt-3 text-gray-400 leading-relaxed">
+          {project.description}
+        </p>
+
+        <div className="mt-5 flex flex-wrap gap-2">
+          {project.tech.map((tech) => (
+            <span
+              key={tech}
+              className="rounded-full bg-amber-500/10 px-3 py-1 text-sm text-amber-400"
+            >
+              {tech}
+            </span>
+          ))}
+        </div>
+
+        <div className="mt-6 flex gap-3">
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 rounded-xl bg-white px-4 py-3 text-black transition hover:bg-amber-500"
+          >
+            <FaGithub />
+            GitHub
+          </a>
+
+          <a
+            href={project.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 rounded-xl border border-white px-4 py-3 text-white transition hover:bg-white hover:text-black"
+          >
+            <FaExternalLinkAlt />
+            Live Demo
+          </a>
+        </div>
+      </div>
     </div>
   );
 };
 
 const Portfolio = () => {
+  const [selectedImage, setSelectedImage] = useState(null);
+
   return (
-    <div
+    <section
       id="Portfolio"
-      className="w-full px-6 md:px-12 lg:px-20 py-16 bg-stone-900"
+      className="bg-stone-950 px-6 py-24 md:px-12 lg:px-20"
     >
-      <h1 className="text-3xl mb-40 md:text-4xl font-bold text-center text-white">
-        My Portfolio
-      </h1>
+      <div className="mx-auto max-w-7xl">
 
+        {/* Header */}
+        <div className="mb-20 text-center">
+          <span className="text-sm uppercase tracking-[6px] text-amber-500">
+            Portfolio
+          </span>
 
-      <PortfolioSection
-        title="Social Media Platform"
-        description="A social media platform inspired by Instagram, TikTok, and WhatsApp, focused on performance, scalability, and seamless user experience across mobile and web platforms. Built with real-time messaging, stories, media sharing, authentication, notifications, and responsive cross-platform architecture."
-        images={[soc1, soc2, soc3, soc4, soc5,soc6,]}
-      />
+          <h1 className="mt-4 text-4xl font-bold text-white md:text-6xl">
+            Featured Projects
+          </h1>
 
-      <div className="w-full lg:w-[50%] px-4 -ml-5">
-        <div className="max-w-4xl -mt-60 mx-auto space-y-6">
-
-          {/* GitHub */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
-              GitHub :
-            </h2>
-
-            <a
-              href="https://github.com/omolisa1245/ChatAt.git"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
-            >
-              View Repository
-            </a>
-          </div>
-
-          {/* Website */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
-              Website :
-            </h2>
-
-            <a
-              href="https://chat-at-a1y9.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
-            >
-              Visit Website
-            </a>
-          </div>
-
+          <p className="mx-auto mt-6 max-w-3xl text-gray-400">
+            A collection of web applications, SaaS products,
+            e-commerce solutions, and business platforms
+            designed with scalability, performance, and
+            exceptional user experiences.
+          </p>
         </div>
-      </div>
-      <hr className="mt-20 border-gray-300 mb-39" />
 
-
-      <PortfolioSection
-        title="Christian Empowerment Platform"
-        description="faith-based, non-governmental organization established with a deep burdenfor the holistic development of young people in a rapidly changing and morallycomplex world. The organization was birthed out of a clear recognition of thspiritual, moral, emotional, and leadership gaps that increasingly characterizecontemporary society, especially among youths."
-        images={[fam1, fam3, fam4, fam7, fam8,]}
-      />
-
-      <div className="w-full lg:w-[50%] px-4 ">
-        <div className="max-w-4xl -mt-20 mx-auto space-y-6">
-
-          {/* GitHub */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
-              GitHub :
+        {/* Stats */}
+        <div className="mb-20 grid grid-cols-3 gap-6 rounded-3xl border border-stone-800 bg-stone-900 p-8 text-center">
+          <div>
+            <h2 className="text-4xl font-bold text-amber-500">
+              10+
             </h2>
-
-            <a
-              href="https://github.com/Fameuntold/Fameuntold.git"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
-            >
-              View Repository
-            </a>
+            <p className="text-gray-400">Projects</p>
           </div>
 
-          {/* Website */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
-              Website :
+          <div>
+            <h2 className="text-4xl font-bold text-amber-500">
+              100%
             </h2>
-
-            <a
-              href="https://fameuntold-v6c3.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
-            >
-              Visit Website
-            </a>
+            <p className="text-gray-400">Responsive</p>
           </div>
 
+          <div>
+            <h2 className="text-4xl font-bold text-amber-500">
+              24/7
+            </h2>
+            <p className="text-gray-400">Support</p>
+          </div>
         </div>
-      </div>
-      <hr className="mt-20 border-gray-300 mb-39" />
 
-      
-      <PortfolioSection
-        title="Online Mobile Bank App"
-        description="The Online Mobile Banking App provides users with a secure and seamless way to manage their finances on the go. With features like account management, fund transfers, transaction history, and real-time notifications, the app delivers convenience, reliability, and a modern banking experience directly from a smartphone."
-        images={[bank1, bank2, bank3, bank4, bank7, bank8,]}
-      />
-
-      <div className="w-full lg:w-[50%] px-4 -ml-5">
-        <div className="max-w-4xl -mt-50 mx-auto space-y-6">
-
-          {/* GitHub */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
-              GitHub :
-            </h2>
-
-            <a
-              href="https://github.com/omolisa1245/Tal-Bank.git"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
-            >
-              View Repository
-            </a>
-          </div>
-
-          {/* Website */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
-              Website :
-            </h2>
-
-            <a
-              href="https://tal-bank-j87e.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
-            >
-              Visit Website
-            </a>
-          </div>
-
+        {/* Projects Grid */}
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+          {projects.map((project, index) => (
+            <ProjectCard
+              key={index}
+              project={project}
+              onPreview={setSelectedImage}
+            />
+          ))}
         </div>
+
+        {/* Modal */}
+        {selectedImage && (
+          <div
+            onClick={() => setSelectedImage(null)}
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-6"
+          >
+            <img
+              src={selectedImage}
+              alt=""
+              className="max-h-[90vh] max-w-[90vw] rounded-2xl"
+            />
+          </div>
+        )}
       </div>
-      <hr className="mt-20 border-gray-300 mb-39" />
-
-
-      <PortfolioSection
-        title="Virtual DJ App"
-        description="The Virtual DJ App is a dynamic music mixing platform designed to deliver a seamless and immersive DJ experience directly in the browser. It allows users to play, mix, and control audio tracks with intuitive controls, real-time effects, and smooth transitions. Built with performance and responsiveness in mind, the application provides a modern interface that enhances creativity while maintaining simplicity for both beginners and advanced users."
-        images={[dj1, dj2, dj3,dj1,dj3,dj1]}
-      />
-
-      <div className="w-full lg:w-[50%] px-4 -ml-5">
-        <div className="max-w-4xl -mt-14 mx-auto space-y-6">
-
-          {/* GitHub */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
-              GitHub :
-            </h2>
-
-            <a
-              href="https://github.com/omolisa1245/virtual.git"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
-            >
-              View Repository
-            </a>
-          </div>
-
-          {/* Website */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
-              Website :
-            </h2>
-
-            <a
-              href="https://virtual-seven-kappa.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
-            >
-              Visit Website
-            </a>
-          </div>
-
-        </div>
-      </div>
-      <hr className="mt-20 border-gray-300 mb-18" />
-
-
-      <PortfolioSection
-        title="Musical Player App"
-        description="The Musical Player App is a modern, interactive web application designed to deliver a seamless and immersive music listening experience. Built with a focus on performance, responsiveness, and user-friendly design, the app allows users to play, pause, skip, and repeat tracks effortlessly while enjoying a visually engaging interface."
-        images={[player1, player2, player3, player1, player2, player3]}
-      />
-
-      <div className="w-full lg:w-[50%] px-4 -ml-5">
-        <div className="max-w-4xl -mt-22 mx-auto space-y-6">
-
-          {/* GitHub */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
-              GitHub :
-            </h2>
-
-            <a
-              href="https://github.com/omolisa1245/Goplay.git"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
-            >
-              View Repository
-            </a>
-          </div>
-
-          {/* Website */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
-              Website :
-            </h2>
-
-            <a
-              href="https://goplay-raj7.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
-            >
-              Visit Website
-            </a>
-          </div>
-
-        </div>
-      </div>
-      <hr className="mt-20 border-gray-300 mb-18" />
-
-      <PortfolioSection
-        title="Kiddies Store E-commerce"
-        description="Kiddies Treasures is a one-stop shop for all newborn, baby, and toddler needs, offering fabulous products at incredible prices with convenient shopping and fast delivery. Designed to simplify parenting life, the platform eliminates the stress of traditional shopping while ensuring comfort and accessibility."
-        images={[native1, native2, native3, native4, native5, native6]}
-
-      />
-      <div className="w-full lg:w-[50%] -mt-20 px-4 lg:-ml-5 xl:-ml-7">
-        <div className="max-w-4xl mx-auto space-y-6">
-
-          {/* GitHub */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
-              GitHub :
-            </h2>
-
-            <a
-              href="https://github.com/omolisa1245/kiddiesplace.git"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
-            >
-              View Repository
-            </a>
-          </div>
-
-          {/* Website */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
-              Website :
-            </h2>
-
-            <a
-              href="https://kiddiesplace-tdse.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
-            >
-              Visit Website
-            </a>
-          </div>
-
-        </div>
-      </div>
-
-      <hr className="mt-20 border-gray-300 mb-18" />
-
-      <PortfolioSection
-        title="Food E-commerce Website"
-        description="NativePot is a premium local food vendor brand founded in 2025, delivering authentic Nigerian dishes with exceptional quality. The platform captures cultural richness, immersive dining experiences, and seamless ordering, reflecting the brand’s passion for tradition and taste."
-        images={[food1, food2, food3, food4, food5, food6, food7]}
-      />
-
-      <div className="w-full lg:w-[50%] px-4 -mt-40 lg:-ml-5 xl:-ml-7">
-        <div className="max-w-4xl mx-auto space-y-6">
-
-          {/* GitHub */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
-              GitHub :
-            </h2>
-
-            <a
-              href="https://github.com/omolisa1245/nativepot.git"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
-            >
-              View Repository
-            </a>
-          </div>
-
-          {/* Website */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
-              Website :
-            </h2>
-
-            <a
-              href="https://nativepot-ten.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
-            >
-              Visit Website
-            </a>
-          </div>
-
-        </div>
-      </div>
-      <hr className="mt-20 border-gray-300 mb-18" />
-
-      <PortfolioSection
-        title="Car Services Website"
-        description="This vehicle transport platform focuses on safe, timely, and cost-effective car delivery services for individuals and companies. Built with reliability and customer satisfaction in mind, the system emphasizes efficiency, competitive pricing, and trust."
-        images={[car1, car2, car3, car4, car5, car6, car7, car8]}
-      />
-
-      <div className="w-full lg:w-[50%] px-4 -mt-40 lg:-ml-5 xl:-ml-7">
-        <div className="max-w-4xl mx-auto space-y-6">
-
-          {/* GitHub */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
-              GitHub :
-            </h2>
-
-            <a
-              href="https://github.com/omolisa1245/ride-along.git"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
-            >
-              View Repository
-            </a>
-          </div>
-
-          {/* Website */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
-              Website :
-            </h2>
-
-            <a
-              href="https://ride-along-l49g.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
-            >
-              Visit Website
-            </a>
-          </div>
-
-        </div>
-      </div>
-      <hr className="mt-20 border-gray-300 mb-18" />
-
-      <PortfolioSection
-        title="Musical Instrument Website"
-        description="An online platform providing accessible one-on-one music lessons focused on string instruments. The system enables remote learning with expert instructors, flexible scheduling, and a safe virtual environment, helping students grow their musical passion."
-        images={[just1, just2, just3, just4, just5, just6, just7, just9]}
-      />
-
-      <div className="w-full lg:w-[50%] px-4 -mt-40 lg:-ml-5 xl:-ml-7">
-        <div className="max-w-4xl mx-auto space-y-6">
-
-          {/* GitHub */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
-              GitHub :
-            </h2>
-
-            <a
-              href="https://github.com/omolisa1245/justring.git"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
-            >
-              View Repository
-            </a>
-          </div>
-
-          {/* Website */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white/10 backdrop-blur-md p-6 rounded-2xl">
-            <h2 className="text-lg sm:text-xl md:text-2xl font-semibold text-white">
-              Website :
-            </h2>
-
-            <a
-              href="https://justring-c62t.vercel.app/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm sm:text-base md:text-lg bg-white text-black px-6 py-2 rounded-lg hover:bg-amber-600 hover:text-white transition duration-300 text-center"
-            >
-              Visit Website
-            </a>
-          </div>
-
-        </div>
-      </div>
-      <hr className="mt-20 border-gray-300 mb-18" />
-
-
-
-
-    </div>
+    </section>
   );
 };
 
